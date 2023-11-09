@@ -1,0 +1,87 @@
+@import "base";
+
+$secondary-color: #6c757d;
+$background-color: #f8f9fa;
+$border-color: #ced4da;
+$success-color: #28a745;
+$error-color: #dc3545;
+$padding: 0.5rem;
+
+.formSection {
+  background-color: $background-color;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1rem;
+  margin: 4rem 0;
+
+  h2 {
+    color: $primary-color;
+    margin-bottom: $padding;
+    text-align: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1rem;
+    margin: auto;
+
+    input[type="text"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      margin-bottom: $padding;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+      }
+    }
+
+    textarea {
+      height: 200px;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.2s ease-in-out;
+
+      &.deleteButton {
+        background-color: $error-color;
+        color: white;
+
+        &:hover {
+          background-color: darken($error-color, 5%);
+        }
+      }
+
+      &:not(.deleteButton) {
+        // Save button
+        background-color: $success-color;
+        color: white;
+
+        &:hover {
+          background-color: darken($success-color, 5%);
+        }
+      }
+    }
+  }
+}
+
+// Responsive design adjustments
+@media (max-width: 768px) {
+  section {
+    padding: $padding 0.5rem;
+  }
+
+  form {
+    padding: 0;
+  }
+}

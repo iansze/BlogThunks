@@ -1,0 +1,51 @@
+@import "base";
+
+$link-color: #337ab7;
+$background-color: #f7f7f7;
+$border-radius: 4px;
+$hover-background: #e7e7e7;
+$padding-standard: 1rem;
+
+section {
+  margin-top: 2rem;
+  h2 {
+    color: $primary-color;
+    margin-bottom: $padding-standard;
+  }
+
+  ol {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      background: #fff;
+      margin-bottom: 1rem;
+      padding: $padding-standard;
+      border: 1px solid #ddd;
+      border-radius: $border-radius;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: $link-color;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($link-color, 10%);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    width: 95%;
+    margin: 1rem;
+  }
+}
