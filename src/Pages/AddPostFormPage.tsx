@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { addNewPost } from "../store/feature/posts/postsThunks";
 import { Post } from "../types/types";
 import { nanoid } from "@reduxjs/toolkit";
-import "../styles/_form.scss";
 
 const AddPostForm = () => {
   const [title, setTitle] = useState("");

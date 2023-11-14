@@ -4,7 +4,6 @@ import PostAuth from "../components/PostAuth";
 import TimeFormat from "../components/TimeFormat";
 import ReactionButton from "../components/ReactionButton";
 import { Link, useParams } from "react-router-dom";
-import "../styles/_post.scss";
 
 const SinglePost = () => {
   const { id } = useParams<{ id: string }>();

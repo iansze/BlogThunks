@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux";
 import { fetchPosts } from "../store/feature/posts/postsThunks";
 import { AppDispatch, RootState } from "../store/index";
 import PostArticle from "../components/PostArticle";
-import "../styles/_post.scss";
 
 const PostsList = () => {
   const dispatch = useDispatch<AppDispatch>();

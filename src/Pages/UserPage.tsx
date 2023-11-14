@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
 import { Link, useParams } from "react-router-dom";
-import "../styles/_list.scss";
 
 const UserPage = () => {
   const { userId } = useParams<{ userId: string }>();

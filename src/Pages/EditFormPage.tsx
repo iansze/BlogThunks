@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import { AppDispatch, RootState } from "../store";
 import { deletePost, updatePost } from "../store/feature/posts/postsThunks";
 import { Post } from "../types/types";
-import "../styles/_form.scss";
 
 const EditForm = () => {
   const { id } = useParams();
